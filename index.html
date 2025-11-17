@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Влияние ИИ на рынок труда и «незаменимые» профессии</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #222;
+      background: #f5f5f7;
+    }
+    header, main, footer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    header {
+      padding-top: 32px;
+      padding-bottom: 0px;
+    }
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      line-height: 1.3;
+      margin-top: 1.8em;
+      margin-bottom: 0.6em;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-top: 0;
+    }
+    h2 {
+      font-size: 1.6rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+    }
+    p {
+      margin: 0 0 1em;
+    }
+    .lead {
+      font-size: 1.1rem;
+      color: #444;
+    }
+    .meta {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 1.5em;
+    }
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      margin-right: 4px;
+      margin-bottom: 4px;
+      font-size: 0.8rem;
+      border-radius: 999px;
+      background: #e5e7eb;
+    }
+    .highlight {
+      background: #fff3cd;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+    .quote {
+      border-left: 4px solid #3b82f6;
+      padding-left: 12px;
+      margin: 1.2em 0;
+      font-style: italic;
+      color: #444;
+      background: #ffffff;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    .quote cite {
+      display: block;
+      margin-top: 4px;
+      font-style: normal;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .grid-two {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 16px;
+      margin: 1.5em 0;
+    }
+    .box {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+    }
+    .box-title {
+      font-weight: 600;
+      margin-bottom: 0.4em;
+    }
+    .numbered-list {
+      counter-reset: num;
+      list-style: none;
+      padding-left: 0;
+    }
+    .numbered-list li {
+      counter-increment: num;
+      margin-bottom: 0.8em;
+      position: relative;
+      padding-left: 32px;
+    }
+    .numbered-list li::before {
+      content: counter(num);
+      position: absolute;
+      left: 0;
+      top: 0.1em;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: #3b82f6;
+      color: #fff;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    figure.media-placeholder {
+      margin: 1.6em 0;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px dashed #cbd5f5;
+      background: #eef2ff;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+    figure.media-placeholder strong {
+      display: block;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      color: #1d4ed8;
+    }
+    figure.media-placeholder small {
+      display: block;
+      margin-top: 4px;
+      color: #6b7280;
+    }
+    .timeline {
+      position: relative;
+      margin: 1.5em 0;
+      padding-left: 24px;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #c4d3ff;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.4em;
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: 4px;
+      width: 14px;
+      height: 14px;
+      background: #3b82f6;
+      border-radius: 999px;
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.25);
+    }
+    .timeline-year {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #1d4ed8;
+      margin-bottom: 2px;
+    }
+    .tag-list {
+      margin-bottom: 1.6em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.5em 0;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+    }
+    table thead {
+      background: #e5e7eb;
+    }
+    table th, table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 0.92rem;
+      text-align: left;
+    }
+    table th {
+      font-weight: 600;
+    }
+    .scenario {
+      margin-bottom: 1.5em;
+    }
+    .scenario-title {
+      font-weight: 600;
+      margin-bottom: 0.3em;
+    }
+    .scenario-label {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 0.8rem;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: #0369a1;
+      margin-bottom: 0.4em;
+    }
+    .faq-item {
+      margin-bottom: 1.2em;
+    }
+    .faq-q {
+      font-weight: 600;
+    }
+    .faq-a {
+      margin-top: 0.3em;
+    }
+    footer {
+      font-size: 0.85rem;
+      color: #6b7280;
+      padding-bottom: 32px;
+    }
+
+    /* Дополнительные стили для интерактивов */
+    .btn {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      background: #3b82f6;
+      color: #fff;
+      transition: background 0.2s, transform 0.1s, box-shadow 0.1s;
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+    }
+    .btn:hover {
+      background: #2563eb;
+      transform: translateY(-1px);
+    }
+    .btn:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.35);
+    }
+    .btn-secondary {
+      background: #e5e7eb;
+      color: #111827;
+      box-shadow: none;
+    }
+    .btn-secondary:hover {
+      background: #d1d5db;
+    }
+    .pill-tabs {
+      display: inline-flex;
+      padding: 3px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      margin-bottom: 0.8em;
+    }
+    .pill-tab {
+      border-radius: 999px;
+      border: none;
+      padding: 6px 14px;
+      font-size: 0.86rem;
+      cursor: pointer;
+      background: transparent;
+      color: #374151;
+    }
+    .pill-tab.active {
+      background: #ffffff;
+      color: #111827;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.15);
+    }
+    .comparison-text {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 12px 14px;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+      font-size: 0.96rem;
+    }
+    .comparison-meta {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-bottom: 0.6em;
+    }
+    .infographic-bars {
+      margin-top: 0.6em;
+    }
+    .bar-row {
+      margin-bottom: 0.6em;
+    }
+    .bar-label {
+      font-size: 0.85rem;
+      margin-bottom: 2px;
+    }
+    .bar-bg {
+      width: 100%;
+      height: 14px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #3b82f6, #6366f1);
+    }
+    .bar-note {
+      font-size: 0.78rem;
+      color: #6b7280;
+      margin-top: 4px;
+    }
+    .scenario-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 1em;
+    }
+    .scenario-btn {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      cursor: pointer;
+      font-size: 0.86rem;
+      color: #374151;
+      transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+    }
+    .scenario-btn.active {
+      background: #e0f2fe;
+      border-color: #0ea5e9;
+      box-shadow: 0 3px 10px rgba(14, 165, 233, 0.3);
+    }
+    .scenario-dynamic {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 14px 16px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+      font-size: 0.95rem;
+    }
+    .scenario-dynamic h4 {
+      margin-top: 0;
+    }
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .checklist-item input[type="checkbox"] {
+      margin-top: 4px;
+    }
+    .checklist-result {
+      margin-top: 0.6em;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .poll-result {
+      margin-top: 0.6em;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .small-muted {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+    .media-inline {
+      margin-top: 8px;
+    }
+    .media-inline img, .media-inline video {
+      max-width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .grid-two {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Нужные работники: какие профессии не заберет ИИ</h1>
+    <p class="lead">
+      Искусственный интеллект учится писать, рисовать, программировать и советовать. 
+      Но значит ли это, что людям пора освобождать рабочие места? 
+      Попробуем честно разобраться, какие профессии действительно под угрозой, 
+      а какие останутся в руках человека — и почему.
+    </p>
+
+    <p><em><strong>Использование генеративных моделей.</strong> При подготовке материала частично применялись генеративные модели. С помощью чат-бота ChatGPT (онлайн-сервис на сайте <a href="https://chat.openai.com/" target="_blank">https://chat.openai.com/</a>) было выполнено обёртывание готового текста статьи в HTML-код. Генеративная видеомодель Sora (описанная на сайте OpenAI: <a href="https://sora.chatgpt.com/explore" target="_blank">https://sora.chatgpt.com/explore</a>) использовалась для создания коротких иллюстративных видеороликов и вариантов обложки.</em></p>
+
+    <div class="tag-list">
+      <span class="tag">#ИскусственныйИнтеллект</span>
+      <span class="tag">#ПрофессииБудущего</span>
+      <span class="tag">#РынокТруда</span>
+      <span class="tag">#Образование</span>
+    </div>
+
+    <!-- ГЛАВНЫЙ ВИЗУАЛ / ОБЛОЖКА -->
+    <figure class="media-placeholder">
+      <div>
+        <div class="media-inline">
+          <img src="img/1.png" alt="Человек и ИИ работают рядом за одним столом" />
+        </div>
+      </div>
+    </figure>
+  </header>
+
+  <main>
+    <section id="vvedenie">
+      <h2>1. От страха к пониманию</h2>
+      <p>
+        В конце 2010-х ИИ был чем-то далёким и сложным. О нём писали в научных статьях и айти-новостях. 
+        Но к середине 2020-х всё изменилось: появились доступные генеративные модели, 
+        которые начали массово использовать для текстов, картинок, кода и анализа данных.
+      </p>
+      <p>
+        В новостях всё чаще звучит вопрос: 
+        <span class="highlight">«Заберёт ли ИИ нашу работу?»</span> 
+        Люди боятся, что их заменят алгоритмы, а их навыки устареют. 
+        Но гораздо продуктивнее спросить иначе: 
+        <span class="highlight">«Какие профессии ИИ не может (и не должен) забирать?»</span>
+      </p>
+
+      <div class="grid-two">
+        <div class="box">
+          <div class="box-title">Почему тема актуальна именно сейчас</div>
+          <ul>
+            <li>Компании уже внедряют ИИ в повседневные процессы.</li>
+            <li>Ученики и студенты пользуются нейросетями в учёбе.</li>
+            <li>Государства обсуждают регулирование ИИ, в том числе на рынке труда.</li>
+            <li>Возникает запрос на новые навыки и «устойчивые» профессии.</li>
+          </ul>
+        </div>
+        <div class="box">
+          <div class="box-title">Что будет в этой статье</div>
+          <ol class="numbered-list">
+            <li>Разберёмся, что на самом деле умеет ИИ и чего не умеет.</li>
+            <li>Посмотрим на группы профессий, где человек остаётся ключевым.</li>
+            <li>Проанализируем, как могут измениться профессии в будущем.</li>
+            <li>Сформулируем выводы и рекомендации для выбора профессии.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- ИНТЕРАКТИВНЫЙ ОПРОС -->
+      <figure class="media-placeholder">
+        <strong>ИНТЕРАКТИВНЫЙ ОПРОС</strong>
+        <form id="poll-form">
+          <p><strong>Боитесь ли Вы, что ИИ заберёт Вашу будущую профессию?</strong></p>
+          <label>
+            <input type="radio" name="fear" value="yes" />
+            Да, это меня пугает
+          </label><br />
+          <label>
+            <input type="radio" name="fear" value="no" />
+            Нет, считаю, что мы будем работать вместе
+          </label><br />
+          <label>
+            <input type="radio" name="fear" value="dk" />
+            Пока не знаю, не определился(ась)
+          </label>
+
+          <p style="margin-top: 0.8em;"><strong>Какую сферу Вы считаете наиболее уязвимой?</strong></p>
+          <select name="sector">
+            <option value="">Выберите вариант</option>
+            <option value="office">Офисные и административные профессии</option>
+            <option value="creative">Творческие профессии</option>
+            <option value="manual">Профессии «работы руками»</option>
+            <option value="service">Сфера услуг и торговли</option>
+            <option value="none">Не считаю какие-то сферы особенно уязвимыми</option>
+          </select>
+
+          <div style="margin-top: 0.8em;">
+            <button type="submit" class="btn">Отправить ответы</button>
+          </div>
+          <div id="poll-result" class="poll-result"></div>
+        </form>
+      </figure>
+    </section>
+
+    <section id="chto-umeet-ii">
+      <h2>2. Что сегодня умеет ИИ — и чего не умеет</h2>
+      <p>
+        Чтобы честно оценить риски и возможности, важно понять, где ИИ действительно силён, 
+        а где его способность пока переоценена. Условно задачи можно разделить на три группы:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Тип задач</th>
+            <th>Примеры</th>
+            <th>Роль ИИ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Рутинные и повторяющиеся</td>
+            <td>Обработка форм, проверка ошибок, сортировка заявок</td>
+            <td>Можно автоматизировать частично или полностью</td>
+          </tr>
+          <tr>
+            <td>Творческие, но формализуемые</td>
+            <td>Генерация текстов по шаблону, типовые иллюстрации</td>
+            <td>ИИ становится сильным помощником, иногда — заменой</td>
+          </tr>
+          <tr>
+            <td>Сложные, контекстные, человеческие</td>
+            <td>Переговоры, терапия, воспитание, ответственное принятие решения</td>
+            <td>ИИ может помогать, но не способен заменить человека целиком</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="quote">
+        «И главное, помните: ИИ – это не угроза, а инструмент, который может сделать нашу жизнь лучше. Только от нас зависит, как мы будем его использовать.».
+        <cite>Комментарий исследователя рынка труда Алёны Горбачёвой</cite>
+      </div>
+
+      <!-- ИНФОГРАФИКА: ВКЛАД ИИ -->
+      <figure class="media-placeholder">
+        <strong>ВКЛАД ИИ В АВТОМАТИЗАЦИЮ</strong>
+        <div class="infographic-bars">
+          <div class="bar-row">
+            <div class="bar-label">Рутинные офисные задачи (до 2030 г.) — ~70% автоматизации</div>
+            <div class="bar-bg">
+              <div class="bar-fill" style="width: 70%;"></div>
+            </div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Работа с данными и аналитика — ~60%</div>
+            <div class="bar-bg">
+              <div class="bar-fill" style="width: 60%;"></div>
+            </div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Творческие задачи по шаблону — ~50%</div>
+            <div class="bar-bg">
+              <div class="bar-fill" style="width: 50%;"></div>
+            </div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Коммуникация и работа с людьми — &lt; 20%</div>
+            <div class="bar-bg">
+              <div class="bar-fill" style="width: 20%;"></div>
+            </div>
+          </div>
+        </div>
+        <p class="bar-note">
+          Чем выше полоска, тем больший объём задач в этой области можно автоматизировать с помощью ИИ. 
+          Но это не означает исчезновение профессии: меняется набор функций внутри неё.
+        </p>
+      </figure>
+
+      <h3>2.1. Сильные стороны ИИ</h3>
+      <ul>
+        <li><strong>Скорость:</strong> ИИ обрабатывает тысячи документов за секунды.</li>
+        <li><strong>Масштаб:</strong> может анализировать большие массивы информации, которые человеку недоступны.</li>
+        <li><strong>Последовательность:</strong> не устает, не забывает, не теряет концентрацию.</li>
+        <li><strong>Работа по шаблону:</strong> отлично справляется там, где есть понятные правила.</li>
+      </ul>
+
+      <h3>2.2. Ограничения ИИ</h3>
+      <ul>
+        <li><strong>Нет собственного опыта:</strong> ИИ не живёт, не чувствует и не несёт личную ответственность.</li>
+        <li><strong>Проблемы с контекстом:</strong> сложные культурные и эмоциональные нюансы часто «теряются».</li>
+        <li><strong>Зависимость от данных:</strong> если данные искажены, выводы ИИ тоже будут искажены.</li>
+        <li><strong>Этика и ценности:</strong> ИИ не обладает моралью, он лишь имитирует её.</li>
+      </ul>
+
+      <!-- ВИДЕО-ТЕГ (ЗАГЛУШКА) -->
+		<figure class="media-placeholder">
+		  <div class="media-inline">
+			<img src="img/vid.gif" style="width: 800px; max-width: 100%; height: auto;"/>
+		  </div>
+		</figure>
+    </section>
+
+    <section id="gruppy-professiy">
+      <h2>3. Профессии, которые ИИ не заберёт: пять ключевых групп</h2>
+      <p>
+        Говорить «эту конкретную профессию ИИ никогда не заменит» рискованно: 
+        сами профессии постоянно трансформируются. 
+        Но можно выделить <span class="highlight">группы деятельностей</span>, 
+        где решающую роль играет человек — его тело, эмоции, ответственность и способность к смыслотворчеству.
+      </p>
+
+      <h3>3.1. Профессии эмоционального интеллекта</h3>
+      <p>
+        Эмоциональный интеллект — это способность понимать себя и других, 
+        сопереживать, поддерживать, выстраивать доверие. ИИ может распознать эмоцию по тексту или выражению лица, 
+        но не может прожить её вместе с человеком.
+      </p>
+      <p>К таким профессиям относятся:</p>
+      <ul>
+        <li>психологи и психотерапевты;</li>
+        <li>педагоги и кураторы образовательных программ;</li>
+        <li>социальные работники;</li>
+        <li>HR-специалисты, занимающиеся развитием и поддержкой людей, а не только наймом;</li>
+        <li>медиаторы и переговорщики.</li>
+      </ul>
+
+      <!-- АУДИОИНТЕРВЬЮ -->
+      <figure class="media-placeholder">
+        <strong>АУДИО: РАЗГОВОР С ПСИХОЛОГОМ</strong>
+			<iframe
+			width="720"
+			height="405"
+			src="https://rutube.ru/play/embed/9789c66470eaeed018b7eb9410729dd4"
+			style="border: none;"
+			allow="clipboard-write; autoplay"
+			allowFullScreen
+			></iframe>
+      </figure>
+
+      <h3>3.2. Ремёсла и профессии «работы руками»</h3>
+      <p>
+        Роботы уже могут выполнять многие действия: переносить грузы, собирать детали, 
+        выполнять операции высокой точности. Но реальный мир слишком разнообразен, 
+        и пока людям всё ещё приходится иметь дело с непредсказуемостью.
+      </p>
+      <p>Профессии, где тактильные навыки и «чувство дела» особенно важны:</p>
+      <ul>
+        <li>слесари, электрики, сантехники;</li>
+        <li>мастера по ремонту техники и бытовых приборов;</li>
+        <li>плотники, столяры, реставраторы мебели;</li>
+        <li>ювелиры и мастера по художественным изделиям;</li>
+        <li>врачи-хирурги (ИИ — помощник, но не главный действующий).</li>
+      </ul>
+
+      <!-- ФОТОГАЛЕРЕЯ -->
+      <figure class="media-placeholder">
+        <strong>ФОТОГАЛЕРЕЯ: «РАБОТА РУКАМИ»</strong>
+        <div class="grid-two media-inline">
+          <div>
+            <img src="img/11.jpeg" alt="Плотник в мастерской" />
+            <p class="small-muted">Плотник: каждый кусок дерева уникален, как и задаваемая форма.</p>
+          </div>
+          <div>
+            <img src="img/33.jpeg" alt="Ювелир за рабочим столом" />
+            <p class="small-muted">Ювелир: работа, где точность сочетается с художественным вкусом.</p>
+          </div>
+          <div>
+            <img src="img/22.jpg" alt="Хирург в операционной" />
+            <p class="small-muted">Хирург: ИИ подсказывает, но решение и действие остаются за человеком.</p>
+          </div>
+          <div>
+            <img src="img/44.jpg" alt="Электрик на выезде" />
+            <p class="small-muted">Электрик: реальные условия далеки от идеальных схем в учебнике.</p>
+          </div>
+        </div>
+      </figure>
+
+      <h3>3.3. Профессии смыслотворчества и культурного кода</h3>
+      <p>
+        ИИ может написать текст, сгенерировать картинку или придумать слоган. 
+        Но задача <em>смыслотворчества</em> — не просто создать форму, 
+        а встроить её в культурный контекст, в историю, в систему ценностей.
+      </p>
+      <p>Здесь работают:</p>
+      <ul>
+        <li>журналисты-расследователи и репортёры, работающие с источниками и фактами;</li>
+        <li>редакторы и продюсеры, формирующие повестку и нарратив;</li>
+        <li>режиссёры, сценаристы, драматурги;</li>
+        <li>креативные продюсеры рекламных и медийных проектов;</li>
+        <li>художественные руководители, кураторы выставок и фестивалей.</li>
+      </ul>
+
+      <!-- ИНТЕРАКТИВ: СРАВНЕНИЕ ТЕКСТА ИИ И ЧЕЛОВЕКА -->
+      <figure class="media-placeholder">
+        <strong>СРАВНЕНИЕ ТЕКСТА ИИ И ЧЕЛОВЕКА</strong>
+        <div class="pill-tabs" id="comparison-tabs">
+          <button type="button" class="pill-tab active" data-version="ai">Версия ИИ</button>
+          <button type="button" class="pill-tab" data-version="human">Версия человека</button>
+        </div>
+        <div class="comparison-text">
+          <div class="comparison-meta" id="comparison-meta">
+            Вариант 1: текст, сгенерированный нейросетью по запросу «история о выборе профессии в эпоху ИИ».
+          </div>
+          <div id="comparison-ai">
+            <p>
+              «В мире, где искусственный интеллект стал неотъемлемой частью жизни, 
+              каждый человек должен адаптироваться к новым условиям. 
+              Выбор профессии больше не ограничивается традиционными рамками, 
+              а требует гибкости и готовности к постоянному обучению...»
+            </p>
+            <p class="small-muted">
+              Текст выглядит гладко, но скорее общий и шаблонный, без конкретных деталей и личных наблюдений.
+            </p>
+          </div>
+          <div id="comparison-human" style="display: none;">
+            <p>
+              «Когда в школе запустили эксперимент с ИИ-ассистентом, 
+              мы сначала радовались: домашку стало делать проще. 
+              Но через пару месяцев я поймал себя на том, что ответы стали одинаковыми — у меня, у друзей, 
+              даже у тех, кто раньше писал по-своему. 
+              Тогда я впервые задумался: если мы все будем отвечать как нейросеть, 
+              то кто вообще будет отличаться?»
+            </p>
+            <p class="small-muted">
+              Здесь есть личный опыт, конфликт и вопрос, который цепляет читателя — это и есть «смыслотворчество».
+            </p>
+          </div>
+        </div>
+      </figure>
+
+      <h3>3.4. Профессии высокой ответственности</h3>
+      <p>
+        Там, где ошибка может стоить человеческой жизни, свободы или больших ресурсов, 
+        ИИ используют как инструмент, но не оставляют его единственным «решающим голосом».
+      </p>
+      <p>Типичные примеры:</p>
+      <ul>
+        <li>врачи, принимающие решения о лечении и операциях;</li>
+        <li>пилоты и диспетчеры авиарейсов;</li>
+        <li>судьи и следователи;</li>
+        <li>инженеры, отвечающие за безопасность мостов, плотин, энергетических объектов;</li>
+        <li>спасатели, сотрудники МЧС и других экстренных служб.</li>
+      </ul>
+
+      <!-- ИНФОГРАФИКА: ЦЕНА ОШИБКИ -->
+      <figure class="media-placeholder">
+        <strong>ЦЕНА ОШИБКИ</strong>
+        <table>
+          <thead>
+            <tr>
+              <th>Сфера</th>
+              <th>Пример профессии</th>
+              <th>Цена ошибки (1–5)</th>
+              <th>Роль ИИ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Медицина</td>
+              <td>Врач-реаниматолог</td>
+              <td>5</td>
+              <td>Система поддержки принятия решений, анализ снимков</td>
+            </tr>
+            <tr>
+              <td>Транспорт</td>
+              <td>Пилот гражданской авиации</td>
+              <td>5</td>
+              <td>Автопилот, мониторинг параметров полёта</td>
+            </tr>
+            <tr>
+              <td>Правосудие</td>
+              <td>Судья</td>
+              <td>5</td>
+              <td>Анализ документов, поиск похожих дел</td>
+            </tr>
+            <tr>
+              <td>Инфраструктура</td>
+              <td>Инженер по безопасности объекта</td>
+              <td>4</td>
+              <td>Моделирование риска, мониторинг датчиков</td>
+            </tr>
+          </tbody>
+        </table>
+        <small>В сферах с высокой ценой ошибки ИИ остаётся ассистентом, а не заменой человека.</small>
+      </figure>
+
+      <h3>3.5. Профессии «на стыке» и новые роли</h3>
+      <p>
+        Есть и направления, где ИИ создаёт новые профессии вместо того, чтобы старые уничтожать. 
+        Появляются специалисты, которые <em>управляют</em> ИИ, 
+        объясняют его решения и отвечают за этичность применения.
+      </p>
+      <p>Примеры таких ролей:</p>
+      <ul>
+        <li>специалист по интеграции ИИ в компании;</li>
+        <li>AI-куратор (человек, который задаёт модели задачи, проверяет результат и адаптирует его);</li>
+        <li>эксперт по этике ИИ и защите данных;</li>
+        <li>аналитик, который объясняет решения алгоритмов понятным языком;</li>
+        <li>«цифровой тренер» — обучает сотрудников пользоваться ИИ-инструментами.</li>
+      </ul>
+
+      <!-- СХЕМА / МАЙНДМЭП -->
+	    <figure class="media-placeholder">
+	      <strong>РЕСУРС: «АТЛАС НОВЫХ ПРОФЕССИЙ»</strong>
+
+	      <div class="box" style="margin-top: 12px;">
+		    <div class="box-title">Atlas100 — актуальный каталог профессий будущего</div>
+		    <p>
+		      На сайте собраны описания перспективных профессий, навыков и отраслей, 
+		      которые будут развиваться в ближайшие годы. Ресурс помогает понять, 
+		      как технологии — в том числе ИИ — меняют рынок труда и какие роли появляются на стыке сфер.
+		    </p>
+
+		    <a href="https://atlas100.ru/catalog/" target="_blank"
+		       style="
+			     display: inline-block;
+			     padding: 10px 16px;
+			     margin-top: 8px;
+			     background: #3b82f6;
+			     color: #fff;
+			     border-radius: 8px;
+			     text-decoration: none;
+			     font-weight: 600;
+			     transition: background 0.2s ease;
+		       "
+		       onmouseover="this.style.background='#1e3a8a'"
+		       onmouseout="this.style.background='#3b82f6'">
+		      Перейти в каталог профессий →
+		    </a>
+	      </div>
+
+	      <small>Рекомендуемый источник для самостоятельного изучения профессий будущего.</small>
+	    </figure>
+    </section>
+
+    <section id="chelovecheskie-navyki">
+      <h2>4. Человеческие качества, которые невозможно «забрать»</h2>
+      <p>
+        За каждой профессией стоят навыки и качества. 
+        Если смотреть не только на должности, но и на <em>компетенции</em>, 
+        хорошо видно, почему человек остаётся незаменимым.
+      </p>
+
+      <ol class="numbered-list">
+        <li>
+          <strong>Эмпатия и сопереживание.</strong><br />
+          Способность почувствовать другого человека, поддержать, 
+          выбрать нужные слова в момент горя или радости. 
+          Для ИИ это всего лишь статистика, для человека — личный опыт.
+        </li>
+        <li>
+          <strong>Моральный выбор и ответственность.</strong><br />
+          Человек способен принять решение, исходя из совести, 
+          ценностей и долгосрочных последствий, а затем нести за него ответственность.
+        </li>
+        <li>
+          <strong>Интуиция и творческое озарение.</strong><br />
+          Новые идеи часто появляются не из расчёта, а из интуитивного «щелчка» — 
+          когда разные опыты и знания неожиданно соединяются.
+        </li>
+        <li>
+          <strong>Тактильность и работа с физическим миром.</strong><br />
+          Руки мастера, чувство баланса, ловкость, внимание к мелочам — 
+          всё это пока сложно воспроизвести роботам в реальных, непредсказуемых условиях.
+        </li>
+        <li>
+          <strong>Культурный контекст.</strong><br />
+          Люди живут в культуре, традициях и истории. 
+          ИИ может анализировать тексты, но не может по-настоящему 
+          «быть частью» конкретной семьи, города, поколения.
+        </li>
+      </ol>
+    </section>
+
+    <section id="budushchee-scenarii">
+      <h2>5. Три сценария будущего: как ИИ изменит профессии</h2>
+      <p>
+        Будущее нельзя предсказать точно, но можно описать несколько возможных сценариев. 
+        Каждый из них по-своему реалистичен, и реальность, скорее всего, будет комбинацией всех трёх.
+      </p>
+
+      <div class="scenario">
+        <div class="scenario-label">Сценарий 1 — оптимистичный</div>
+        <div class="scenario-title">Сотрудничество человека и ИИ</div>
+        <p>
+          В этом сценарии ИИ забирает рутинные задачи, 
+          а человек сосредотачивается на том, что требует творчества и общения.
+        </p>
+        <ul>
+          <li>В офисах — ИИ-ассистенты, которые готовят черновики отчётов, писем и презентаций.</li>
+          <li>В больницах — ИИ, который помогает анализировать снимки и тесты, 
+            но окончательный диагноз ставит врач.</li>
+          <li>В школах — адаптивные образовательные платформы, 
+            а учитель уделяет больше внимания детям и их мотивации.</li>
+        </ul>
+      </div>
+
+      <div class="scenario">
+        <div class="scenario-label">Сценарий 2 — технологический</div>
+        <div class="scenario-title">Максимальная автоматизация</div>
+        <p>
+          В этом варианте автоматизируется всё, что возможно: 
+          склады, логистика, часть торговли, массовое обслуживание. 
+          Человек уходит в нишу «сложных» и ответственных задач.
+        </p>
+        <ul>
+          <li>Многие профессии среднего уровня (операторы, менеджеры по стандартным задачам) сокращаются.</li>
+          <li>Повышается ценность уникальных специализаций и творческих профессий.</li>
+          <li>Появляется запрос на программы переобучения и социальной поддержки.</li>
+        </ul>
+      </div>
+
+      <div class="scenario">
+        <div class="scenario-label">Сценарий 3 — регуляторный</div>
+        <div class="scenario-title">Ограничения и правила игры</div>
+        <p>
+          Государства и международные организации вводят законы, 
+          ограничивающие использование ИИ в некоторых сферах: 
+          правосудие, медицина, безопасность, образование детей.
+        </p>
+        <ul>
+          <li>Задействуется принцип: «человек всегда принимает финальное решение».</li>
+          <li>Вводятся стандарты прозрачности и объяснимости решений ИИ.</li>
+          <li>Растёт значение специалистов по праву и этике в области ИИ.</li>
+        </ul>
+      </div>
+
+      <!-- ИНТЕРАКТИВ: ВЫБЕРИ СВОЁ БУДУЩЕЕ -->
+      <figure class="media-placeholder">
+        <strong>ИНТЕРАКТИВ: «ВЫБЕРИТЕ СВОЁ БУДУЩЕЕ»</strong>
+        <p class="small-muted">Нажмите на один из сценариев, чтобы увидеть, как он повлияет на профессии.</p>
+        <div class="scenario-buttons" id="scenario-buttons">
+          <button type="button" class="scenario-btn active" data-scenario="coop">Сотрудничество</button>
+          <button type="button" class="scenario-btn" data-scenario="auto">Максимальная автоматизация</button>
+          <button type="button" class="scenario-btn" data-scenario="reg">Жёсткое регулирование</button>
+        </div>
+        <div class="scenario-dynamic" id="scenario-dynamic">
+          <h4>Сотрудничество человека и ИИ</h4>
+          <p>
+            ИИ помогает в рутинных и аналитических задачах, а человек остаётся центром принятия решений, 
+            общения и творчества. Появляется много гибридных профессий — от «учителя с ИИ-ассистентом» 
+            до «врача, работающего с цифровым двойником пациента».
+          </p>
+          <ul>
+            <li><strong>Плюсы:</strong> рост продуктивности, новые профессии, больше времени на «человеческую» работу.</li>
+            <li><strong>Минусы:</strong> тем, кто игнорирует ИИ, становится сложнее конкурировать на рынке труда.</li>
+          </ul>
+        </div>
+      </figure>
+    </section>
+
+    <section id="prakticheskaya-chast">
+      <h2>6. Что это значит для школьников и студентов</h2>
+      <p>
+        Для тех, кто только выбирает профессию, разговор об ИИ особенно важен. 
+        Нужно уметь отличить краткосрочные тренды от долгосрочных навыков.
+      </p>
+
+      <div class="grid-two">
+        <div class="box">
+          <div class="box-title">Чего точно не стоит делать</div>
+          <ul>
+            <li>Выбирать профессию <em>только</em> потому, что она популярна сейчас.</li>
+            <li>Отказываться от ИИ из страха: «он заберёт мою работу, значит, не буду им пользоваться».</li>
+            <li>Надеяться, что диплом сам по себе гарантирует стабильность.</li>
+          </ul>
+        </div>
+        <div class="box">
+          <div class="box-title">Что полезно уже сегодня</div>
+          <ul>
+            <li>Осваивать базовые ИИ-инструменты: генераторы текстов, изображений, аналитические сервисы.</li>
+            <li>Развивать «человеческие» навыки: коммуникацию, критическое мышление, эмпатию.</li>
+            <li>Выбирать направление, где технологии и человеческая составляющая дополняют друг друга.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ТАБЛИЦА НАВЫКОВ -->
+      <table>
+        <thead>
+          <tr>
+            <th>Навык</th>
+            <th>Почему важен в эпоху ИИ</th>
+            <th>Как развивать</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Критическое мышление</td>
+            <td>Помогает оценивать ответы ИИ, отличать факт от вымысла.</td>
+            <td>Анализировать новости, проверять источники, спорить с аргументацией.</td>
+          </tr>
+          <tr>
+            <td>Коммуникация и эмпатия</td>
+            <td>Нужна для работы в команде, переговоров, обучения других.</td>
+            <td>Участвовать в проектах, волонтёрстве, выступать публично.</td>
+          </tr>
+          <tr>
+            <td>Креативность</td>
+            <td>Позволяет придумывать новые продукты и идеи, а не копировать готовое.</td>
+            <td>Заниматься творчеством, пробовать разные форматы и роли.</td>
+          </tr>
+          <tr>
+            <td>Готовность учиться всю жизнь</td>
+            <td>Профессии меняются, но способность учиться остаётся ключевой.</td>
+            <td>Проходить онлайн-курсы, пробовать стажировки, менять перспективы.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- ИНТЕРАКТИВНЫЙ ЧЕК-ЛИСТ -->
+      <figure class="media-placeholder">
+        <strong>ИНТЕРАКТИВНЫЙ ЧЕК-ЛИСТ</strong>
+        <p class="small-muted">Отметьте, что уже делаете, и нажмите на кнопку.</p>
+        <div id="checklist">
+          <div class="checklist-item">
+            <input type="checkbox" id="ch1" />
+            <label for="ch1">Я пробовал(а) использовать ИИ для учёбы или творчества.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="ch2" />
+            <label for="ch2">Я понимаю, какие «человеческие» навыки у меня сильнее.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="ch3" />
+            <label for="ch3">Я знаю, какие навыки хочу развивать в ближайший год.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="ch4" />
+            <label for="ch4">Я могу объяснить, как ИИ влияет на мою будущую профессию.</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="ch5" />
+            <label for="ch5">Я не боюсь экспериментировать с новыми технологиями.</label>
+          </div>
+          <button type="button" class="btn-secondary" id="checklist-btn">Посчитать результат</button>
+          <div id="checklist-result" class="checklist-result"></div>
+        </div>
+      </figure>
+    </section>
+
+    <section id="faq">
+      <h2>7. Частые вопросы о профессиях и ИИ</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">«Правда ли, что ИИ лишит работы большинство людей?»</div>
+        <div class="faq-a">
+          Скорее всего нет. ИИ заберёт часть задач, а не людей. 
+          Многие профессии трансформируются: в них появятся новые обязанности, связанные с управлением ИИ и работой с людьми.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">«Есть ли “абсолютно безопасные” профессии?»</div>
+        <div class="faq-a">
+          Абсолютно безопасных профессий не существует: мир меняется. 
+          Но есть направления, где человеческий фактор будет важен ещё очень долго — 
+          это сферы эмоций, ответственности, творчества и работы с физическим миром.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">«Стоит ли избегать ИИ, чтобы сохранить свою уникальность?»</div>
+        <div class="faq-a">
+          Избегать ИИ — всё равно что в своё время избегать компьютеров или интернета. 
+          Гораздо разумнее научиться пользоваться ИИ как инструментом, 
+          а уникальность строить на человеческих качествах и опыте.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">«Как понять, будет ли моя будущая профессия нужной?»</div>
+        <div class="faq-a">
+          Задайте себе несколько вопросов:
+          <ul>
+            <li>Есть ли в этой профессии работа с людьми, их эмоциями и ценностями?</li>
+            <li>Есть ли там креативность и поиск новых решений?</li>
+            <li>Есть ли элементы высокой ответственности за результат?</li>
+          </ul>
+          Чем больше ответов «да», тем выше вероятность, что ИИ станет помощником, а не заменой.
+        </div>
+      </div>
+    </section>
+
+    <section id="zaklyuchenie">
+      <h2>8. Человек плюс ИИ, а не человек против ИИ</h2>
+      <p>
+        Искусственный интеллект меняет рынок труда — это факт. 
+        Но это не история о том, как машины «заберут» людей, 
+        а скорее о том, как люди научатся работать вместе с новыми инструментами.
+      </p>
+      <p>
+        <span class="highlight">ИИ забирает не профессии, а функции.</span> 
+        В первую очередь — рутинные, предсказуемые и легко формализуемые задачи. 
+        Там, где нужны эмпатия, ответственность, творчество и культура, 
+        ключевой фигурой остаётся человек.
+      </p>
+      <p>
+        Для школьников и студентов это не повод для паники, а повод:
+      </p>
+      <ul>
+        <li>осваивать ИИ-инструменты, чтобы не бояться их, а использовать;</li>
+        <li>развивать именно человеческие навыки — общение, критическое мышление, креативность;</li>
+        <li>выбирать профессии, где человек и технологии дополняют друг друга.</li>
+      </ul>
+      <p>
+        Будущее, в котором ИИ работает рядом с нами, уже наступило. 
+        И главный вопрос не «какие профессии он заберёт?», 
+        а «каким человеком я хочу быть в мире, где рядом со мной есть ИИ?».
+      </p>
+
+      <!-- ФИНАЛЬНЫЙ МУЛЬТИМЕДИЙНЫЙ БЛОК -->
+      <figure class="media-placeholder">
+		<p>Изучите атлас профессий, ссылка на который приведена выше, и поделитесь своим мнением.</p>
+        <div class="grid-two media-inline">
+		  <div>
+			<div class="media-inline">
+			  <img src="img/2.jpeg" alt="Человек и ИИ работают рядом за одним столом" />
+			</div>
+		  </div>
+          <div>
+            <form id="future-form">
+              <p><strong>Какую профессию будущего Вы выбираете?</strong></p>
+              <input type="text" name="future-job" placeholder="Например: учитель с ИИ-ассистентом" style="width: 80%; padding: 6px 8px; border-radius: 8px; border: 1px solid #d1d5db; margin-bottom: 8px;" />
+              <textarea name="why" placeholder="Почему именно эта профессия?" rows="3" style="width: 80%; padding: 6px 8px; border-radius: 8px; border: 1px solid #d1d5db;"></textarea>
+              <div style="margin-top: 8px;">
+                <button type="submit" class="btn-secondary">Поделиться ответом</button>
+              </div>
+              <p id="future-form-result" class="small-muted" style="margin-top: 6px;"></p>
+            </form>
+          </div>
+        </div>
+      </figure>
+    </section>
+  </main>
+
+  <script>
+    // Опрос в начале
+    (function () {
+      var pollForm = document.getElementById('poll-form');
+      var pollResult = document.getElementById('poll-result');
+      if (pollForm) {
+        pollForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var data = new FormData(pollForm);
+          var fear = data.get('fear');
+          var sector = data.get('sector');
+          var msg = '';
+
+          if (!fear) {
+            pollResult.textContent = 'Пожалуйста, выберите хотя бы один вариант ответа.';
+            pollResult.style.color = '#b91c1c';
+            return;
+          }
+
+          if (fear === 'yes') {
+            msg += 'Вас тревожит влияние ИИ — это нормально. Важно разобраться, какие навыки помогут чувствовать себя увереннее. ';
+          } else if (fear === 'no') {
+            msg += 'Вы смотрите на ИИ как на партнёра — это сильная позиция на рынке труда. ';
+          } else {
+            msg += 'Вы пока не определились — эта статья как раз поможет сформировать мнение. ';
+          }
+
+          if (sector === 'office') {
+            msg += 'Действительно, многие офисные задачи автоматизируются в первую очередь.';
+          } else if (sector === 'creative') {
+            msg += 'Творческие профессии меняются, но смыслотворчество остаётся за человеком.';
+          } else if (sector === 'manual') {
+            msg += 'Профессии «работы руками» сложнее автоматизировать полностью из-за непредсказуемости реального мира.';
+          } else if (sector === 'service') {
+            msg += 'Сфера услуг тоже меняется: часть процессов можно автоматизировать, но общение с человеком сохраняется.';
+          } else if (sector === 'none') {
+            msg += 'Интересная точка зрения: не выделять «уязвимые» сферы, а смотреть на навыки внутри профессий.';
+          }
+
+          pollResult.textContent = msg;
+          pollResult.style.color = '#111827';
+        });
+      }
+    })();
+
+    // Сравнение текста ИИ и человека
+    (function () {
+      var tabs = document.querySelectorAll('#comparison-tabs .pill-tab');
+      var aiBlock = document.getElementById('comparison-ai');
+      var humanBlock = document.getElementById('comparison-human');
+      var meta = document.getElementById('comparison-meta');
+
+      function setActive(version) {
+        tabs.forEach(function (btn) {
+          btn.classList.toggle('active', btn.getAttribute('data-version') === version);
+        });
+        if (version === 'ai') {
+          aiBlock.style.display = '';
+          humanBlock.style.display = 'none';
+          meta.textContent =
+            'Вариант 1: текст, сгенерированный нейросетью по запросу «история о выборе профессии в эпоху ИИ».';
+        } else {
+          aiBlock.style.display = 'none';
+          humanBlock.style.display = '';
+          meta.textContent =
+            'Вариант 2: текст, написанный человеком на основе личного опыта.';
+        }
+      }
+
+      tabs.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var v = btn.getAttribute('data-version');
+          setActive(v);
+        });
+      });
+    })();
+
+    // Интерактив "Выберите своё будущее"
+    (function () {
+      var buttons = document.querySelectorAll('#scenario-buttons .scenario-btn');
+      var box = document.getElementById('scenario-dynamic');
+      if (!box) return;
+
+      var content = {
+        coop: {
+          title: 'Сотрудничество человека и ИИ',
+          text:
+            'ИИ помогает в рутинных и аналитических задачах, а человек сосредотачивается на общении, творчестве и принятии решений. Это мир, где почти в каждой профессии есть «цифровой ассистент», но ключевая роль остаётся за человеком.',
+          list: [
+            'Плюсы: рост продуктивности, новые профессии, больше времени на «человеческую» работу.',
+            'Минусы: тем, кто игнорирует ИИ, становится сложнее конкурировать на рынке труда.'
+          ]
+        },
+        auto: {
+          title: 'Максимальная автоматизация',
+          text:
+            'Автоматизируется всё, что можно описать правилами: от складской логистики до части офисных задач. Число рабочих мест в рутинных профессиях сокращается, растёт спрос на специалистов «высокой сложности» и креативные роли.',
+          list: [
+            'Плюсы: более дешёвые услуги и товары, освобождение людей от монотонного труда.',
+            'Минусы: риск безработицы для тех, кто не успевает переучиваться, рост социального неравенства.'
+          ]
+        },
+        reg: {
+          title: 'Жёсткое регулирование ИИ',
+          text:
+            'Государства и организации ограничивают использование ИИ в критически важных сферах. Человеческий контроль становится обязательным, создаются новые профессии на стыке технологий и права.',
+          list: [
+            'Плюсы: больше гарантий безопасности и защиты прав людей.',
+            'Минусы: инновации развиваются медленнее, часть проектов тормозится из-за сложного согласования.'
+          ]
+        }
+      };
+
+      function render(key) {
+        var item = content[key];
+        if (!item) return;
+        box.innerHTML =
+          '<h4>' +
+          item.title +
+          '</h4>' +
+          '<p>' +
+          item.text +
+          '</p>' +
+          '<ul>' +
+          item.list.map(function (li) { return '<li>' + li + '</li>'; }).join('') +
+          '</ul>';
+      }
+
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var key = btn.getAttribute('data-scenario');
+          buttons.forEach(function (b) { b.classList.toggle('active', b === btn); });
+          render(key);
+        });
+      });
+    })();
+
+    // Интерактивный чек-лист
+    (function () {
+      var btn = document.getElementById('checklist-btn');
+      var res = document.getElementById('checklist-result');
+      if (!btn || !res) return;
+
+      btn.addEventListener('click', function () {
+        var checks = document.querySelectorAll('#checklist input[type="checkbox"]');
+        var total = checks.length;
+        var done = 0;
+        checks.forEach(function (ch) {
+          if (ch.checked) done++;
+        });
+
+        if (done === 0) {
+          res.textContent = 'Начните с малого: выберите один пункт и реализуйте его в ближайшую неделю.';
+        } else if (done < total) {
+          res.textContent =
+            'Отличный старт: Вы уже выполняете ' +
+            done +
+            ' из ' +
+            total +
+            ' шагов. Подумайте, какой пункт можете добавить следующим.';
+        } else {
+          res.textContent =
+            'Вы закрываете все пункты чек-листа — это сильная позиция на рынке труда будущего.';
+        }
+      });
+    })();
+
+    // Форма в финальном блоке (без отправки на сервер)
+    (function () {
+      var form = document.getElementById('future-form');
+      var out = document.getElementById('future-form-result');
+      if (!form || !out) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var data = new FormData(form);
+        var job = (data.get('future-job') || '').trim();
+        if (!job) {
+          out.textContent = 'Напишите хотя бы пример профессии, о которой Вы думаете.';
+          out.style.color = '#b91c1c';
+          return;
+        }
+        out.textContent = 'Спасибо! Хорошая идея — ' + job + '. Подумайте, какие навыки помогут приблизиться к этой роли уже сейчас.';
+        out.style.color = '#374151';
+      });
+    })();
+  </script>
+</body>
+</html>
